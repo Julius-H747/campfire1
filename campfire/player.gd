@@ -1,90 +1,75 @@
 extends CharacterBody2D
 
-const SPEED := 300.0
-const JAMOUNT := 2
-const DAMOUNT := 1
 
-var JUMP_VELOCITY := -600.0
-
-@export var dash_speed := 800.0
-@export var dash_time := 0.2
-@export var friction := 1200.0   # for decel (feel free to tweak)
-@export var gravity := 1200.0    # if you want your own gravity value
-
+const SPEED = 300.0
+var JUMP_VELOCITY = -600.0
 @onready var asprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var camera: Camera2D = $Camera2D
 
 var is_dashing := false
 var dash_timer := 0.0
-var dash_direction := 1.0
-
-var jumps := 0
-var dashes := 0
-var og_scale: Vector2
+var dash_direction := 0
+@export var dash_speed := 800.0
+@export var dash_time := 0.2
+var jumps = Jamount
+var dashes = Damount
+const Jamount = 2
+const Damount = 1
+var og_scale
 
 func _ready() -> void:
-	camera.zoom = Vector2(1, 1)
-	og_scale = scale
-	jumps = JAMOUNT
-	dashes = DAMOUNT
-
+	camera.zoom.x = 0.95
+	camera.zoom.y = 0.95
+	og_scale = global_scale
+	
 func _physics_process(delta: float) -> void:
-	# Gravity + reset jump/dash when grounded
+	# Add the gravity.
 	if not is_on_floor():
-		velocity.y += gravity * delta
+		velocity += get_gravity() * delta
 	else:
-		jumps = JAMOUNT
-		dashes = DAMOUNT
+		jumps = Jamount
+		dashes = Damount
 		JUMP_VELOCITY = -600.0
 
-	# Jump
+	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and jumps > 0:
 		jump()
 
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("ui_left", "ui_right")
-
-	leftright(direction, delta)
-
-	# Flip sprite based on movement
+	leftright(direction)
 	if velocity.x < 0:
 		asprite.scale.x = -2
 	elif velocity.x > 0:
 		asprite.scale.x = 2
-
-	# Dash movement override
 	if is_dashing:
 		velocity.x = dash_direction * dash_speed
 		velocity.y = 0
 		dash_timer -= delta
-		if dash_timer <= 0.0:
+		if dash_timer <= 0:
 			is_dashing = false
 			scale = og_scale
-
 	animate()
 	check_cam()
 	move_and_slide()
 
-func leftright(d: float, delta: float) -> void:
-	if d != 0.0:
+func leftright(d):
+	if d:
 		velocity.x = d * SPEED
 	else:
-		velocity.x = move_toward(velocity.x, 0.0, friction * delta)
-
-	# Dash (make sure "n" exists in InputMap)
-	if Input.is_action_just_pressed("n") and not is_on_floor() and dashes > 0 and not is_dashing:
-		is_dashing = true
-		dash_timer = dash_time
-		dashes -= 1
-
-		# Use movement direction if moving, otherwise use facing from sprite flip
-		if abs(velocity.x) > 1.0:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+	if Input.is_action_just_pressed("n") and not is_on_floor():
+		if dashes > 0: 
+			is_dashing = true
+			dash_timer = dash_time
 			dash_direction = sign(velocity.x)
-		else:
-			dash_direction = sign(asprite.scale.x)  # -1 or +1 only
-
-		scale = og_scale - Vector2(0.2, 0.2)
-
-func check_cam() -> void:
+			dashes -= 1
+			scale -= Vector2(0.2, 0.2)
+			if dash_direction == 0:
+				dash_direction = asprite.scale.x
+	
+func check_cam():
 	if camera.limit_right <= position.x:
 		camera.limit_right += 1000
 		camera.limit_left += 1000
@@ -97,24 +82,22 @@ func check_cam() -> void:
 	if camera.limit_top >= position.y:
 		camera.limit_top -= 640
 		camera.limit_bottom -= 640
-
-func animate() -> void:
-	if is_dashing:
-		asprite.play("dash")
-		return
-
-	if is_on_floor():
-		if abs(velocity.x) > 0.1:
-			asprite.play("run")
-		else:
-			asprite.play("idle")
+	
+func animate():
+	if not is_dashing:
+		if velocity.y == 0:	
+			if velocity.x != 0:
+				asprite.play("run")
+			else:	
+				asprite.play("idle")
+		elif velocity.y > 0:
+			asprite.play("jump")
+		elif velocity.y < 0:
+			asprite.play("fall")
 	else:
-		if velocity.y < 0:
-			asprite.play("jump")  # going up
-		else:
-			asprite.play("fall")  # going down
+		asprite.play("dash")
 
-func jump() -> void:
+func jump():
 	velocity.y = JUMP_VELOCITY
 	jumps -= 1
 	JUMP_VELOCITY += 200

@@ -11,4 +11,4 @@ func _process(delta: float) -> void:
 	pass
 
 func rot(r):
-	global_rotation_degrees = r
+	global_rotation_degrees += r

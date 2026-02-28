@@ -18,8 +18,8 @@ const Damount = 1
 var og_scale
 
 func _ready() -> void:
-	camera.zoom.x = 1
-	camera.zoom.y = 1
+	camera.zoom.x = 0.95
+	camera.zoom.y = 0.95
 	og_scale = global_scale
 	
 func _physics_process(delta: float) -> void:

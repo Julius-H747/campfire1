@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://b2itexx0kcmms"]
-
-[ext_resource type="PackedScene" uid="uid://bp6hwclqaxbkl" path="res://Dupe.tscn" id="1_or344"]
-
-[node name="Node2D" type="Node2D" unique_id=810136158]
-
-[node name="level2" parent="." unique_id=550957823 instance=ExtResource("1_or344")]

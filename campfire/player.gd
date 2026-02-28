@@ -38,10 +38,10 @@ func _physics_process(delta: float) -> void:
 		JUMP_VELOCITY = -600.0
 
 	# Jump
-	if Input.is_action_just_pressed("ui_accept") and jumps > 0:
+	if Input.is_action_just_pressed("up") and jumps > 0:
 		jump()
 
-	var direction := Input.get_axis("ui_left", "ui_right")
+	var direction := Input.get_axis("left", "right")
 
 	leftright(direction, delta)
 

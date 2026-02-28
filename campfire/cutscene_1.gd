@@ -1,6 +1,6 @@
 extends Control
 
-var lines = ["hey big dawg!!!", "...", "big dawg you gotta help me my ship ran out of battery", "sure twin dw i got a lightning cable", "NOOOOOOOOO!", "...", "i need a usb c. please help me find one"];
+var lines = ["big dawg thank goodness you are here", "yeah no worries", "big dawg i can sence a usb c cable at the end of the tunnel", "k bet"];
 var line = 0
 var turn = false
 @onready var m1: Label = $man1/Label
@@ -39,4 +39,4 @@ func _process(delta: float) -> void:
 				mh1.visible = false
 				mh2.visible = true
 		else:
-			get_tree().change_scene_to_file("res://level.tscn")
+			get_tree().change_scene_to_file("res://level_2.tscn")

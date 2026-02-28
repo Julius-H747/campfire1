@@ -600,13 +600,6 @@ size = Vector2(231, 209.5)
 
 [node name="level" type="Node2D" unique_id=1517211128]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=40372177]
-
-[node name="Control2" parent="CanvasLayer" unique_id=310837220]
-offset_top = 8.0
-offset_right = 16.0
-offset_bottom = 8.0
-
 [node name="Control" type="Control" parent="." unique_id=1632613119]
 layout_mode = 3
 anchors_preset = 0

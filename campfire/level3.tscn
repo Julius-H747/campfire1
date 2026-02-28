@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4 uid="uid://cb3ws4a72eg1"]
+[gd_scene format=4 uid="uid://cb3ws4a72eg1"]
 
 [ext_resource type="Texture2D" uid="uid://diucico048nfb" path="res://sprites/Scaffolding_and_BG_Parts (16 x 16).png" id="1_qrujo"]
 [ext_resource type="PackedScene" uid="uid://bu7g4hm01d4lp" path="res://player.tscn" id="2_5lcx6"]

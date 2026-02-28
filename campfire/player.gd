@@ -117,9 +117,3 @@ func jump() -> void:
 	velocity.y = JUMP_VELOCITY
 	jumps -= 1
 	JUMP_VELOCITY += 200
-
-func cameraonoff():
-	if camera.enabled == true:
-		camera.enabled = false
-	else:
-		camera.enabled = true

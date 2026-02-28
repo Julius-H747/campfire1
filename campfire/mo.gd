@@ -1,10 +1,9 @@
 extends TileMapLayer
 
-var og_rot
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	og_rot = global_rotation_degrees
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -13,6 +12,3 @@ func _process(delta: float) -> void:
 
 func rot(r):
 	global_rotation_degrees += r
-
-func r():
-	global_rotation_degrees = og_rot

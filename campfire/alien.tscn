@@ -114,7 +114,3 @@ texture = SubResource("GradientTexture2D_wk2vo")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=380127867]
 position = Vector2(-35.5, 83)
 shape = SubResource("RectangleShape2D_7l7fe")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=2070322524]
-enabled = false
-position_smoothing_enabled = true

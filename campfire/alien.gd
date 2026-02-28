@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED = 300.0
-var JUMP_VELOCITY = -600.0
+var JUMP_VELOCITY = -800.0
 @onready var asprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var tele: TextureRect = $AnimatedSprite2D/TextureRect
 var push = 1
@@ -51,8 +51,8 @@ func jump():
 
 func moveobplus():
 	get_tree().call_group("digle", "rot", push)
-	push += 1
+	push = 2
 
 func moveobminus():
 	get_tree().call_group("digle", "rot", push)
-	push -= 1
+	push = -2

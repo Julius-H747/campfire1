@@ -3,8 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://ykrpvgea2otr" path="res://sprites/Backgrounds/BG_1/Woods 2.png" id="1_bl24s"]
 [ext_resource type="Texture2D" uid="uid://duw8ohkkym6yh" path="res://sprites/Backgrounds/BG_1/Woods 1.png" id="1_ix241"]
 [ext_resource type="Script" uid="uid://by3daeht3415m" path="res://cutscene.gd" id="1_u4yv4"]
-[ext_resource type="Script" uid="uid://ct5qu08s0a1bx" path="res://control.gd" id="2_u4yv4"]
+[ext_resource type="Script" path="res://control.gd" id="2_u4yv4"]
+[ext_resource type="FontFile" uid="uid://kr53qpprtd8n" path="res://sprites/pixel-game/Pixel Game.otf" id="5_53jq0"]
 [ext_resource type="Texture2D" uid="uid://b3xc6axfyuakj" path="res://sprites/xeno-grunt/xeno-grunt/spritesheets/4x/xeno-grunt-idle.png" id="5_p30sb"]
+[ext_resource type="Script" uid="uid://dwbn2hjjmhr7d" path="res://rich_text_label.gd" id="6_3q24f"]
 [ext_resource type="Texture2D" uid="uid://nmrobahrvldx" path="res://sprites/120x80_PNGSheets/_Idle.png" id="6_p30sb"]
 
 [sub_resource type="Gradient" id="Gradient_u4yv4"]
@@ -19,9 +21,6 @@ colors = PackedColorArray(1, 0, 0, 0.45882353, 1, 1, 1, 0.45882353)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_53jq0"]
 gradient = SubResource("Gradient_p30sb")
-
-[sub_resource type="LabelSettings" id="LabelSettings_p30sb"]
-font_size = 30
 
 [sub_resource type="Gradient" id="Gradient_53jq0"]
 offsets = PackedFloat32Array(0)
@@ -64,9 +63,6 @@ colors = PackedColorArray(1, 1, 1, 0.45882353, 0, 0, 1, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_vi1t0"]
 gradient = SubResource("Gradient_pvbl2")
-
-[sub_resource type="LabelSettings" id="LabelSettings_53jq0"]
-font_size = 30
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8ye5a"]
 atlas = ExtResource("6_p30sb")
@@ -202,15 +198,18 @@ offset_right = 1151.0
 offset_bottom = 125.0
 texture = SubResource("GradientTexture2D_53jq0")
 
-[node name="Label" type="Label" parent="man1" unique_id=385263544]
+[node name="RichTextLabel" type="RichTextLabel" parent="man1" unique_id=217621627]
 layout_mode = 0
-offset_left = 138.0
-offset_right = 1153.0
-offset_bottom = 121.0
+offset_left = 136.0
+offset_right = 1152.0
+offset_bottom = 128.0
+theme_override_fonts/normal_font = ExtResource("5_53jq0")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
 text = "this is test text"
-label_settings = SubResource("LabelSettings_p30sb")
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("6_3q24f")
 
 [node name="TextureRect2" type="TextureRect" parent="man1" unique_id=1683127662]
 layout_mode = 0
@@ -243,17 +242,17 @@ offset_right = 1143.0
 offset_bottom = 128.0
 texture = SubResource("GradientTexture2D_vi1t0")
 
-[node name="Label" type="Label" parent="man2" unique_id=1682792622]
+[node name="RichTextLabel" type="RichTextLabel" parent="man2" unique_id=1348525204]
 layout_mode = 0
-offset_left = 10.0
-offset_top = -4.0
-offset_right = 1027.0
-offset_bottom = 165.0
-text = "this is test text
-"
-label_settings = SubResource("LabelSettings_53jq0")
+offset_right = 1019.0
+offset_bottom = 124.0
+theme_override_fonts/normal_font = ExtResource("5_53jq0")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "this text is a test"
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("6_3q24f")
 
 [node name="TextureRect2" type="TextureRect" parent="man2" unique_id=1058316677]
 layout_mode = 0

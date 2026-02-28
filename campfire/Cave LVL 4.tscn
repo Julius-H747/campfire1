@@ -1,5 +1,9 @@
 [gd_scene format=3 uid="uid://chij1fnqd6knh"]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="TileSet" id="TileSet_0e05f"]
+physics_layer_0/collision_layer = 1
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
+[node name="Node2D" type="Node2D" unique_id=1283080509]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=612578497]
+tile_set = SubResource("TileSet_0e05f")

@@ -1,10 +1,15 @@
-[gd_scene load_steps=0 format=3 uid="uid://dp7iokxr2gl0e"]
+[gd_scene format=3 uid="uid://dp7iokxr2gl0e"]
 
 [ext_resource type="Texture2D" uid="uid://camn8n64mmmi0" path="res://sprites/Backgrounds/BG_2/BG.png" id="1_kxvun"]
 [ext_resource type="Texture2D" uid="uid://ciu7wpqoyspn4" path="res://sprites/Backgrounds/BG_2/Fog.png" id="2_kq3yo"]
 [ext_resource type="Texture2D" uid="uid://duw8ohkkym6yh" path="res://sprites/Backgrounds/BG_1/Woods 1.png" id="3_kxtwu"]
 [ext_resource type="Texture2D" uid="uid://b01cmm52l8ntg" path="res://sprites/Backgrounds/BG_1/Lights 2.png" id="4_dob1i"]
 [ext_resource type="Texture2D" uid="uid://be706nct8s366" path="res://sprites/Backgrounds/BG_1/Lights 1.png" id="5_hkas0"]
+[ext_resource type="Texture2D" uid="uid://djbb2anyr6w4n" path="res://sprites/OutlinesUIKit/OutlinesUIKit/BasicShadowBack.png" id="6_kxtwu"]
+[ext_resource type="FontFile" uid="uid://kr53qpprtd8n" path="res://sprites/pixel-game/Pixel Game.otf" id="7_dob1i"]
+[ext_resource type="Script" uid="uid://qghlev0etb76" path="res://button.gd" id="8_cf7nr"]
+[ext_resource type="Texture2D" uid="uid://bu0t3v4d4dgcd" path="res://sprites/back.png" id="8_hkas0"]
+[ext_resource type="Texture2D" uid="uid://uynau3ir1key" path="res://sprites/back_hover.png" id="9_cf7nr"]
 
 [node name="Control" type="Control" unique_id=1533583298]
 layout_mode = 3
@@ -49,9 +54,54 @@ texture = ExtResource("5_hkas0")
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
+[node name="BasicShadowBack" type="Sprite2D" parent="." unique_id=1943387458]
+position = Vector2(575.9966, 255.99963)
+scale = Vector2(7.680067, 2.5600069)
+texture = ExtResource("6_kxtwu")
+metadata/_edit_group_ = true
+
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1565308146]
 layout_mode = 0
-offset_left = 320.0
-offset_top = 192.0
-offset_right = 832.0
-offset_bottom = 448.0
+offset_left = 256.0
+offset_top = 152.0
+offset_right = 648.33386
+offset_bottom = 376.83008
+scale = Vector2(0.81563187, 0.9251432)
+theme_override_fonts/normal_font = ExtResource("7_dob1i")
+theme_override_font_sizes/normal_font_size = 70
+text = "Alien
+-	Move =  a  d
+-	Jump = w"
+fit_content = true
+metadata/_edit_group_ = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=1460085532]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 152.0
+offset_right = 896.0
+offset_bottom = 360.0
+theme_override_fonts/normal_font = ExtResource("7_dob1i")
+theme_override_font_sizes/normal_font_size = 53
+text = "Human
+-	Move =  ←  →
+-	Jump =  ↑"
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="." unique_id=728548642]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("8_cf7nr")
+
+[node name="TextureButton" type="TextureButton" parent="Button" unique_id=1830784141]
+layout_mode = 0
+offset_left = 488.0
+offset_top = 448.0
+offset_right = 665.0
+offset_bottom = 504.0
+texture_normal = ExtResource("8_hkas0")
+texture_pressed = ExtResource("8_hkas0")
+texture_hover = ExtResource("9_cf7nr")
+
+[connection signal="pressed" from="Button/TextureButton" to="Button" method="_on_texture_button_pressed"]

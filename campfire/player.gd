@@ -31,6 +31,7 @@ func _physics_process(delta: float) -> void:
 		dashes = Damount
 		JUMP_VELOCITY = -600.0
 
+<<<<<<< HEAD
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and jumps > 0:
 		jump()
@@ -39,6 +40,17 @@ func _physics_process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("ui_left", "ui_right")
 	leftright(direction)
+=======
+	# Jump
+	if Input.is_action_just_pressed("up") and jumps > 0:
+		jump()
+
+	var direction := Input.get_axis("left", "right")
+
+	leftright(direction, delta)
+
+	# Flip sprite based on movement
+>>>>>>> movement
 	if velocity.x < 0:
 		asprite.scale.x = -2
 	elif velocity.x > 0:

@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bff1syfk34kvr" path="res://alien.tscn" id="1_xdadj"]
 [ext_resource type="PackedScene" uid="uid://bu7g4hm01d4lp" path="res://player.tscn" id="2_1y8me"]
+[ext_resource type="FontFile" uid="uid://kr53qpprtd8n" path="res://sprites/pixel-game/Pixel Game.otf" id="3_7dov7"]
 [ext_resource type="Texture2D" uid="uid://dl6lsysujdbi4" path="res://sprites/Cave Platformer Tileset [16x16][FREE] - RottingPixels/Cave Platformer Tileset [16x16][FREE] - RottingPixels/cave-platformer-tileset-16x16.png" id="3_n7ypv"]
 [ext_resource type="Script" uid="uid://cukpgh1u6i7km" path="res://mo.gd" id="4_1y8me"]
 [ext_resource type="Script" uid="uid://1d1svj3yb3e4" path="res://wall.gd" id="5_0s5r2"]
@@ -101,6 +102,7 @@ texture = ExtResource("3_n7ypv")
 sources/0 = SubResource("TileSetAtlasSource_7j8ne")
 
 [sub_resource type="LabelSettings" id="LabelSettings_xdadj"]
+font = ExtResource("3_7dov7")
 font_size = 30
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n7ypv"]
@@ -598,8 +600,7 @@ offset_left = 238.0
 offset_top = 504.0
 offset_right = 655.0
 offset_bottom = 591.0
-text = "press X or C to rotate objects
-"
+text = "wasd to move"
 label_settings = SubResource("LabelSettings_xdadj")
 
 [node name="alien" parent="." unique_id=2363711 instance=ExtResource("1_xdadj")]

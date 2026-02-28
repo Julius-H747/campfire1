@@ -59,7 +59,6 @@ func _physics_process(delta: float) -> void:
 		if dash_timer <= 0.0:
 			is_dashing = false
 			scale = og_scale
-
 	animate()
 	check_cam()
 	move_and_slide()

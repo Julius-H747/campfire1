@@ -1,21 +1,21 @@
-[gd_scene format=4 uid="uid://cg4au81w3jx8r"]
+[gd_scene format=4 uid="uid://bp6hwclqaxbkl"]
 
-[ext_resource type="Texture2D" path="res://03 water.png" id="1_ehv2h"]
-[ext_resource type="PackedScene" uid="uid://bff1syfk34kvr" path="res://alien.tscn" id="1_xdadj"]
-[ext_resource type="PackedScene" uid="uid://bu7g4hm01d4lp" path="res://player.tscn" id="2_1y8me"]
-[ext_resource type="FontFile" uid="uid://kr53qpprtd8n" path="res://sprites/pixel-game/Pixel Game.otf" id="3_7dov7"]
-[ext_resource type="Texture2D" uid="uid://dl6lsysujdbi4" path="res://sprites/Cave Platformer Tileset [16x16][FREE] - RottingPixels/Cave Platformer Tileset [16x16][FREE] - RottingPixels/cave-platformer-tileset-16x16.png" id="3_n7ypv"]
-[ext_resource type="Script" uid="uid://cukpgh1u6i7km" path="res://mo.gd" id="4_1y8me"]
-[ext_resource type="Script" uid="uid://1d1svj3yb3e4" path="res://wall.gd" id="5_0s5r2"]
-[ext_resource type="PackedScene" uid="uid://b0ggqdn0p4cp0" path="res://buttonpush.tscn" id="5_n7ypv"]
-[ext_resource type="PackedScene" uid="uid://cm7eafwlhbqm6" path="res://spike.tscn" id="7_7j8ne"]
+[ext_resource type="Texture2D" path="res://03 water.png" id="1_y0onk"]
+[ext_resource type="PackedScene" uid="uid://b0ggqdn0p4cp0" path="res://buttonpush.tscn" id="2_2b3d4"]
+[ext_resource type="FontFile" uid="uid://kr53qpprtd8n" path="res://sprites/pixel-game/Pixel Game.otf" id="3_p4674"]
+[ext_resource type="PackedScene" uid="uid://bff1syfk34kvr" path="res://alien.tscn" id="4_itwyi"]
+[ext_resource type="PackedScene" uid="uid://bu7g4hm01d4lp" path="res://player.tscn" id="5_s7b0a"]
+[ext_resource type="Texture2D" uid="uid://dl6lsysujdbi4" path="res://sprites/Cave Platformer Tileset [16x16][FREE] - RottingPixels/Cave Platformer Tileset [16x16][FREE] - RottingPixels/cave-platformer-tileset-16x16.png" id="6_m5f4c"]
+[ext_resource type="Script" uid="uid://cukpgh1u6i7km" path="res://mo.gd" id="7_vawsh"]
+[ext_resource type="Script" uid="uid://1d1svj3yb3e4" path="res://wall.gd" id="8_huq4v"]
+[ext_resource type="PackedScene" uid="uid://cm7eafwlhbqm6" path="res://spike.tscn" id="9_aegfs"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xdadj"]
-font = ExtResource("3_7dov7")
+font = ExtResource("3_p4674")
 font_size = 30
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n7ypv"]
-texture = ExtResource("3_n7ypv")
+texture = ExtResource("6_m5f4c")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -194,7 +194,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_n7ypv")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1y8me"]
-texture = ExtResource("3_n7ypv")
+texture = ExtResource("6_m5f4c")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -288,7 +288,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_1y8me")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0s5r2"]
-texture = ExtResource("3_n7ypv")
+texture = ExtResource("6_m5f4c")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -480,7 +480,7 @@ offset_left = -37.0
 offset_top = 6.0
 offset_right = 1556.0
 offset_bottom = 451.0
-texture = ExtResource("1_ehv2h")
+texture = ExtResource("1_y0onk")
 expand_mode = 1
 
 [node name="TextureRect2" type="TextureRect" parent="Control" unique_id=1710876689]
@@ -489,7 +489,7 @@ offset_left = 1541.0
 offset_top = -20.0
 offset_right = 2766.0
 offset_bottom = 464.0
-texture = ExtResource("1_ehv2h")
+texture = ExtResource("1_y0onk")
 expand_mode = 1
 
 [node name="TextureRect3" type="TextureRect" parent="Control" unique_id=1554599450]
@@ -498,7 +498,7 @@ offset_left = 2748.0
 offset_top = -23.0
 offset_right = 4136.0
 offset_bottom = 430.0
-texture = ExtResource("1_ehv2h")
+texture = ExtResource("1_y0onk")
 expand_mode = 1
 
 [node name="TextureRect4" type="TextureRect" parent="Control" unique_id=607851457]
@@ -507,7 +507,7 @@ offset_left = -14.0
 offset_top = 297.0
 offset_right = 1666.0
 offset_bottom = 845.0
-texture = ExtResource("1_ehv2h")
+texture = ExtResource("1_y0onk")
 expand_mode = 1
 
 [node name="TextureRect5" type="TextureRect" parent="Control" unique_id=1862243483]
@@ -516,7 +516,7 @@ offset_left = 1662.0
 offset_top = 324.0
 offset_right = 2778.0
 offset_bottom = 868.0
-texture = ExtResource("1_ehv2h")
+texture = ExtResource("1_y0onk")
 expand_mode = 1
 
 [node name="TextureRect6" type="TextureRect" parent="Control" unique_id=1662472636]
@@ -525,7 +525,7 @@ offset_left = 2756.0
 offset_top = 301.0
 offset_right = 3962.0
 offset_bottom = 872.0
-texture = ExtResource("1_ehv2h")
+texture = ExtResource("1_y0onk")
 expand_mode = 1
 
 [node name="TextureRect12" type="TextureRect" parent="Control" unique_id=1534391183]
@@ -534,7 +534,7 @@ offset_left = 3570.0
 offset_top = -541.0
 offset_right = 4780.0
 offset_bottom = -161.0
-texture = ExtResource("1_ehv2h")
+texture = ExtResource("1_y0onk")
 expand_mode = 1
 
 [node name="TextureRect13" type="TextureRect" parent="Control" unique_id=1123932420]
@@ -543,7 +543,7 @@ offset_left = 4772.0
 offset_top = -562.0
 offset_right = 5982.0
 offset_bottom = -151.0
-texture = ExtResource("1_ehv2h")
+texture = ExtResource("1_y0onk")
 expand_mode = 1
 
 [node name="TextureRect8" type="TextureRect" parent="Control" unique_id=203959346]
@@ -552,7 +552,7 @@ offset_left = 4098.0
 offset_top = -292.0
 offset_right = 5262.0
 offset_bottom = 584.0
-texture = ExtResource("1_ehv2h")
+texture = ExtResource("1_y0onk")
 expand_mode = 1
 
 [node name="TextureRect7" type="TextureRect" parent="Control" unique_id=777468066]
@@ -561,7 +561,7 @@ offset_left = 3929.0
 offset_top = 310.0
 offset_right = 5162.0
 offset_bottom = 869.0
-texture = ExtResource("1_ehv2h")
+texture = ExtResource("1_y0onk")
 expand_mode = 1
 
 [node name="TextureRect11" type="TextureRect" parent="Control" unique_id=745060727]
@@ -570,7 +570,7 @@ offset_left = 2386.0
 offset_top = -534.0
 offset_right = 3579.0
 offset_bottom = -183.0
-texture = ExtResource("1_ehv2h")
+texture = ExtResource("1_y0onk")
 expand_mode = 1
 
 [node name="TextureRect9" type="TextureRect" parent="Control" unique_id=1114695196]
@@ -579,7 +579,7 @@ offset_left = 2935.0
 offset_top = -296.0
 offset_right = 4125.0
 offset_bottom = 4.0
-texture = ExtResource("1_ehv2h")
+texture = ExtResource("1_y0onk")
 expand_mode = 1
 
 [node name="TextureRect10" type="TextureRect" parent="Control" unique_id=660724818]
@@ -588,10 +588,10 @@ offset_left = 1773.0
 offset_top = -287.0
 offset_right = 2966.0
 offset_bottom = -8.0
-texture = ExtResource("1_ehv2h")
+texture = ExtResource("1_y0onk")
 expand_mode = 1
 
-[node name="button" parent="." unique_id=286469629 instance=ExtResource("5_n7ypv")]
+[node name="button" parent="." unique_id=286469629 instance=ExtResource("2_2b3d4")]
 position = Vector2(2493, 299)
 
 [node name="labels" type="Control" parent="." unique_id=1643192053]
@@ -629,10 +629,10 @@ offset_bottom = 591.0
 text = "wasd to move"
 label_settings = SubResource("LabelSettings_xdadj")
 
-[node name="alien" parent="." unique_id=2363711 instance=ExtResource("1_xdadj")]
+[node name="alien" parent="." unique_id=2363711 instance=ExtResource("4_itwyi")]
 position = Vector2(157, 501)
 
-[node name="Player" parent="." unique_id=1639854593 groups=["player"] instance=ExtResource("2_1y8me")]
+[node name="Player" parent="." unique_id=1639854593 groups=["player"] instance=ExtResource("5_s7b0a")]
 position = Vector2(143, 164)
 scale = Vector2(1.5, 1.5)
 
@@ -641,7 +641,7 @@ position = Vector2(1930.0001, 246)
 scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AAD///7/AAAAAAQAAAD/////AAAAAAQAAAD//wAAAAAAAAQAAAD//wEAAAAAAAQAAAAAAP7/AAAAAAQAAAAAAP//AAAAAAQAAAAAAAAAAAAAAAQAAAAAAAEAAAAAAAQAAAD///3/AAAAAAQAAAAAAP3/AAAAAAQAAAD//wIAAAAAAAQAAAAAAAIAAAAAAAQAAAA=")
 tile_set = SubResource("TileSet_0s5r2")
-script = ExtResource("4_1y8me")
+script = ExtResource("7_vawsh")
 
 [node name="MO2" type="TileMapLayer" parent="." unique_id=824001219 groups=["digle"]]
 position = Vector2(3128.0002, 192.00002)
@@ -649,7 +649,7 @@ rotation = 1.5684551
 scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AAD///7/AAAAAAQAAAD/////AAAAAAQAAAD//wAAAAAAAAQAAAD//wEAAAAAAAQAAAAAAP7/AAAAAAQAAAAAAP//AAAAAAQAAAAAAAAAAAAAAAQAAAAAAAEAAAAAAAQAAAD///3/AAAAAAQAAAAAAP3/AAAAAAQAAAD//wIAAAAAAAQAAAAAAAIAAAAAAAQAAAA=")
 tile_set = SubResource("TileSet_0s5r2")
-script = ExtResource("4_1y8me")
+script = ExtResource("7_vawsh")
 
 [node name="MO3" type="TileMapLayer" parent="." unique_id=1211156620 groups=["digle"]]
 position = Vector2(3106.0002, 457)
@@ -657,7 +657,7 @@ rotation = 0.0028047562
 scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AAD///7/AAAAAAQAAAD/////AAAAAAQAAAD//wAAAAAAAAQAAAD//wEAAAAAAAQAAAAAAP7/AAAAAAQAAAAAAP//AAAAAAQAAAAAAAAAAAAAAAQAAAAAAAEAAAAAAAQAAAD///3/AAAAAAQAAAAAAP3/AAAAAAQAAAD//wIAAAAAAAQAAAAAAAIAAAAAAAQAAAA=")
 tile_set = SubResource("TileSet_0s5r2")
-script = ExtResource("4_1y8me")
+script = ExtResource("7_vawsh")
 
 [node name="MO4" type="TileMapLayer" parent="." unique_id=1814440337 groups=["digle"]]
 position = Vector2(4088.0002, -10.000015)
@@ -665,14 +665,14 @@ rotation = 0.0028047562
 scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AAD//wAAAAAAAAUAAAD//wEAAAAAAAUAAAD//wIAAAAAAAUAAAD//wMAAAAAAAUAAAD//wQAAAAAAAUAAAD//wUAAAAAAAUAAAAAAAAAAAAAAAUAAAAAAAEAAAAAAAUAAAAAAAIAAAAAAAUAAAAAAAMAAAAAAAUAAAAAAAQAAAAAAAUAAAAAAAUAAAAAAAUAAAD//wYAAAAAAAUAAAAAAAYAAAAAAAUAAAD///3/AAAAAAUAAAD///7/AAAAAAUAAAD/////AAAAAAUAAAAAAP3/AAAAAAUAAAAAAP7/AAAAAAUAAAAAAP//AAAAAAUAAAA=")
 tile_set = SubResource("TileSet_0s5r2")
-script = ExtResource("4_1y8me")
+script = ExtResource("7_vawsh")
 
 [node name="wall" type="TileMapLayer" parent="." unique_id=1947293020 groups=["wall"]]
 position = Vector2(78, -180.00002)
 scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AAAqAA4AAAAAAAUAAAAqAA8AAAAAAAUAAAAqABAAAAAAAAUAAAA=")
 tile_set = SubResource("TileSet_n7ypv")
-script = ExtResource("5_0s5r2")
+script = ExtResource("8_huq4v")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1543771345]
 position = Vector2(79, -180)
@@ -682,18 +682,18 @@ tile_set = SubResource("TileSet_7j8ne")
 
 [node name="spikes" type="Node2D" parent="." unique_id=1481259312]
 
-[node name="Sprite2D5" parent="spikes" unique_id=204215931 instance=ExtResource("7_7j8ne")]
+[node name="Sprite2D5" parent="spikes" unique_id=204215931 instance=ExtResource("9_aegfs")]
 position = Vector2(2229.4753, 417.50003)
 scale = Vector2(4.8524656, 5.2777786)
 
-[node name="Sprite2D3" parent="spikes" unique_id=277944591 instance=ExtResource("7_7j8ne")]
+[node name="Sprite2D3" parent="spikes" unique_id=277944591 instance=ExtResource("9_aegfs")]
 position = Vector2(1675, 413)
 scale = Vector2(4.878047, 4.7777753)
 
-[node name="Sprite2D2" parent="spikes" unique_id=798000014 instance=ExtResource("7_7j8ne")]
+[node name="Sprite2D2" parent="spikes" unique_id=798000014 instance=ExtResource("9_aegfs")]
 position = Vector2(1873, 412.00003)
 scale = Vector2(5.0243945, 4.5833325)
 
-[node name="Sprite2D4" parent="spikes" unique_id=2078909391 instance=ExtResource("7_7j8ne")]
+[node name="Sprite2D4" parent="spikes" unique_id=2078909391 instance=ExtResource("9_aegfs")]
 position = Vector2(2056.5, 416.00003)
 scale = Vector2(4.0243917, 5.135783)

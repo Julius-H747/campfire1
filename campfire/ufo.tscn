@@ -3,13 +3,15 @@
 [ext_resource type="Texture2D" uid="uid://b06q26t8yl1rk" path="res://sprites/Sprites and asset packs for caves/Sprites and asset packs for caves/Cavern Tileset/crystal cave tiles.png" id="1_lwnds"]
 [ext_resource type="FontFile" uid="uid://kr53qpprtd8n" path="res://sprites/pixel-game/Pixel Game.otf" id="1_rp6wq"]
 [ext_resource type="Texture2D" uid="uid://dr0sfd3hjoimg" path="res://sprites/Sprites and asset packs for caves/Sprites and asset packs for caves/Dungeon Tileset with Side door.png" id="2_vg23t"]
-[ext_resource type="Script" path="res://area_2d.gd" id="4_g7foj"]
+[ext_resource type="Script" uid="uid://c3lkes3nevkik" path="res://area_2d.gd" id="4_g7foj"]
 [ext_resource type="Texture2D" uid="uid://c2sw75ovbsoyb" path="res://sprites/Sprites and asset packs for caves/Sprites and asset packs for caves/Side door.png" id="4_rit6l"]
 [ext_resource type="Texture2D" uid="uid://cu0o2lqiadf0" path="res://sprites/Pixel Woods Asset Pack/Pixel Woods Asset Pack/Backgrounds/BG_1/Lights 2.png" id="4_vg23t"]
 [ext_resource type="PackedScene" uid="uid://bu7g4hm01d4lp" path="res://player.tscn" id="5_bh5go"]
 [ext_resource type="Texture2D" uid="uid://d0ovej2j568nr" path="res://sprites/Sprites and asset packs for caves/Sprites and asset packs for caves/USB/vector-pixel-art-usb-wire-260nw-1222483150-removebg-preview.png" id="7_g7foj"]
 [ext_resource type="Script" uid="uid://bedal6fsgivry" path="res://usbs.gd" id="7_u063t"]
 [ext_resource type="Script" uid="uid://dj6q4dwj7fbx" path="res://checkbbbbbbox.gd" id="10_wugmh"]
+[ext_resource type="PackedScene" uid="uid://bff1syfk34kvr" path="res://alien.tscn" id="11_2vx44"]
+[ext_resource type="Script" uid="uid://isxlfbhtax0f" path="res://lava3.gd" id="11_dc8l6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lwnds"]
 texture = ExtResource("1_lwnds")
@@ -3366,6 +3368,9 @@ height = 79.89441
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2vx44"]
 size = Vector2(196, 95)
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_f38p0"]
+distance = 66.666626
+
 [node name="ufo" type="Node2D" unique_id=1672917805]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=686171828]
@@ -3501,7 +3506,21 @@ script = ExtResource("10_wugmh")
 position = Vector2(1378, 48.5)
 shape = SubResource("RectangleShape2D_2vx44")
 
+[node name="Area2D4" type="Area2D" parent="." unique_id=277834317]
+position = Vector2(120, 320)
+scale = Vector2(0.75, 0.75)
+script = ExtResource("11_dc8l6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4" unique_id=1582659166]
+position = Vector2(501.3333, 810.6667)
+shape = SubResource("WorldBoundaryShape2D_f38p0")
+
+[node name="alien" parent="." unique_id=2363711 groups=["player2"] instance=ExtResource("11_2vx44")]
+position = Vector2(207.00002, 272)
+scale = Vector2(0.9, 0.9)
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
 [connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D3" to="Area2D3" method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D4" to="Area2D4" method="_on_body_entered"]

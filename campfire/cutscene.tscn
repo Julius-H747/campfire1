@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ykrpvgea2otr" path="res://sprites/Backgrounds/BG_1/Woods 2.png" id="1_bl24s"]
 [ext_resource type="Texture2D" uid="uid://duw8ohkkym6yh" path="res://sprites/Backgrounds/BG_1/Woods 1.png" id="1_ix241"]
 [ext_resource type="Script" uid="uid://by3daeht3415m" path="res://cutscene.gd" id="1_u4yv4"]
-[ext_resource type="Script" path="res://control.gd" id="2_u4yv4"]
+[ext_resource type="Script" uid="uid://ct5qu08s0a1bx" path="res://control.gd" id="2_u4yv4"]
 [ext_resource type="FontFile" uid="uid://kr53qpprtd8n" path="res://sprites/pixel-game/Pixel Game.otf" id="5_53jq0"]
 [ext_resource type="Texture2D" uid="uid://b3xc6axfyuakj" path="res://sprites/xeno-grunt/xeno-grunt/spritesheets/4x/xeno-grunt-idle.png" id="5_p30sb"]
 [ext_resource type="Script" uid="uid://dwbn2hjjmhr7d" path="res://rich_text_label.gd" id="6_3q24f"]
@@ -165,7 +165,7 @@ offset_right = 1158.0
 offset_bottom = 654.0
 texture = ExtResource("1_bl24s")
 
-[node name="bg" type="Control" parent="." unique_id=341163484 groups=["digle"]]
+[node name="bg" type="Control" parent="." unique_id=341163484 groups=["rot"]]
 anchors_preset = 0
 offset_left = -1142.0
 offset_top = -12.0
@@ -181,7 +181,7 @@ offset_right = 2291.0
 offset_bottom = 669.0
 texture = ExtResource("1_ix241")
 
-[node name="TextureRect2" type="TextureRect" parent="bg" unique_id=2054497609 groups=["digle"]]
+[node name="TextureRect2" type="TextureRect" parent="bg" unique_id=2054497609 groups=["rot"]]
 layout_mode = 0
 offset_right = 1149.0
 offset_bottom = 657.0

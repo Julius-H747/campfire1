@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://gvbkleaewla5"]
 
 [ext_resource type="Texture2D" uid="uid://b06q26t8yl1rk" path="res://sprites/Sprites and asset packs for caves/Sprites and asset packs for caves/Cavern Tileset/crystal cave tiles.png" id="1_lwnds"]
-[ext_resource type="Texture2D" uid="uid://dtwcfjb8b7iw0" path="res://sprites/Sprites and asset packs for caves/Sprites and asset packs for caves/UFO/vecteezy_retro-ufo-pixel-art-in-8-bit-game-style_60627454-removebg-preview.png" id="2_7har2"]
+[ext_resource type="Texture2D" uid="uid://dtwcfjb8b7iw0" path="res://sprites/Sprites and asset packs for caves/Sprites and asset packs for caves/UFO/ufo.png" id="2_7har2"]
 [ext_resource type="Texture2D" uid="uid://dr0sfd3hjoimg" path="res://sprites/Sprites and asset packs for caves/Sprites and asset packs for caves/Dungeon Tileset with Side door.png" id="2_vg23t"]
 [ext_resource type="Script" uid="uid://c3lkes3nevkik" path="res://area_2d.gd" id="4_g7foj"]
 [ext_resource type="Texture2D" uid="uid://c2sw75ovbsoyb" path="res://sprites/Sprites and asset packs for caves/Sprites and asset packs for caves/Side door.png" id="4_rit6l"]

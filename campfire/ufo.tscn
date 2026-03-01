@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bu7g4hm01d4lp" path="res://player.tscn" id="5_bh5go"]
 [ext_resource type="Texture2D" uid="uid://d0ovej2j568nr" path="res://sprites/Sprites and asset packs for caves/Sprites and asset packs for caves/USB/vector-pixel-art-usb-wire-260nw-1222483150-removebg-preview.png" id="7_g7foj"]
 [ext_resource type="Script" uid="uid://bedal6fsgivry" path="res://usbs.gd" id="7_u063t"]
-[ext_resource type="Script" uid="uid://dj6q4dwj7fbx" path="res://checkbbbbbbox.gd" id="10_wugmh"]
+[ext_resource type="Script" uid="uid://d20e5qr6qmnqr" path="res://awsedrftgyhujik.gd" id="10_dc8l6"]
 [ext_resource type="PackedScene" uid="uid://bff1syfk34kvr" path="res://alien.tscn" id="11_2vx44"]
 [ext_resource type="Script" uid="uid://isxlfbhtax0f" path="res://lava3.gd" id="11_dc8l6"]
 
@@ -3500,7 +3500,7 @@ scale = Vector2(0.14968827, 0.12355219)
 texture = ExtResource("7_g7foj")
 
 [node name="Area2D3" type="Area2D" parent="." unique_id=1257280740]
-script = ExtResource("10_wugmh")
+script = ExtResource("10_dc8l6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3" unique_id=1153180080]
 position = Vector2(1378, 48.5)

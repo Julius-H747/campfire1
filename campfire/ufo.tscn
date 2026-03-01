@@ -1912,7 +1912,7 @@ sources/0 = SubResource("TileSetAtlasSource_rit6l")
 atlas = ExtResource("4_rit6l")
 region = Rect2(0, 0, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2vx44"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7foj"]
 atlas = ExtResource("4_rit6l")
 region = Rect2(16, 0, 16, 32)
 
@@ -1921,12 +1921,17 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wugmh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2vx44")
 }],
 "loop": false,
 "name": &"door",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7foj")
+}],
+"loop": true,
+"name": &"no",
 "speed": 5.0
 }]
 
@@ -3426,14 +3431,12 @@ script = ExtResource("4_g7foj")
 position = Vector2(56, 176)
 sprite_frames = SubResource("SpriteFrames_dc8l6")
 animation = &"door"
-frame = 1
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2070453280]
 position = Vector2(56, 176)
 shape = SubResource("RectangleShape2D_f38p0")
 
-[node name="Player" parent="." unique_id=1639854593 instance=ExtResource("5_bh5go")]
+[node name="Player" parent="." unique_id=1639854593 groups=["player"] instance=ExtResource("5_bh5go")]
 position = Vector2(120, 320)
 scale = Vector2(0.75, 0.75)
 
@@ -3458,3 +3461,4 @@ scale = Vector2(0.24755704, 0.23587222)
 texture = ExtResource("2_7har2")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

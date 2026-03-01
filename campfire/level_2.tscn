@@ -608,6 +608,17 @@ offset_bottom = 465.0
 text = "press Q and E to push and pull"
 label_settings = SubResource("LabelSettings_xdadj")
 
+[node name="Label7" type="Label" parent="labels" unique_id=1880831597]
+layout_mode = 0
+offset_left = 1170.0
+offset_top = 106.0
+offset_right = 1587.0
+offset_bottom = 205.0
+text = "press ^ x2 to double jump
+press N to dash
+"
+label_settings = SubResource("LabelSettings_xdadj")
+
 [node name="Label" type="Label" parent="labels" unique_id=1204249945]
 layout_mode = 0
 offset_left = 1170.0
@@ -615,16 +626,6 @@ offset_top = 504.0
 offset_right = 1587.0
 offset_bottom = 591.0
 text = "press X or C to rotate objects
-"
-label_settings = SubResource("LabelSettings_xdadj")
-
-[node name="Label" type="Label" parent="labels/Label" unique_id=1880831597]
-layout_mode = 0
-offset_top = -398.0
-offset_right = 417.0
-offset_bottom = -311.0
-text = "press ^ x2 to double jump
-press N to dash
 "
 label_settings = SubResource("LabelSettings_xdadj")
 
@@ -636,6 +637,15 @@ offset_right = 734.0
 offset_bottom = 170.0
 text = "< ^ > use arrow keys
 "
+label_settings = SubResource("LabelSettings_xdadj")
+
+[node name="Label6" type="Label" parent="labels" unique_id=281422715]
+layout_mode = 0
+offset_left = 3584.0
+offset_top = -204.0
+offset_right = 4001.0
+offset_bottom = -117.0
+text = "press G to swap focus to alien"
 label_settings = SubResource("LabelSettings_xdadj")
 
 [node name="Label3" type="Label" parent="labels" unique_id=56021798]
@@ -654,10 +664,10 @@ tile_map_data = PackedByteArray("AAD//woAAAAEAAIAAAD//wsAAAAHAAIAAAD//wwAAAAHAAI
 tile_set = SubResource("TileSet_7j8ne")
 
 [node name="alien" parent="." unique_id=2363711 groups=["player2"] instance=ExtResource("1_xdadj")]
-position = Vector2(2950, -265)
+position = Vector2(211, 496)
 
 [node name="Player" parent="." unique_id=1639854593 groups=["player"] instance=ExtResource("2_1y8me")]
-position = Vector2(2906, -501)
+position = Vector2(221, 157)
 scale = Vector2(1.5, 1.5)
 
 [node name="PO" type="TileMapLayer" parent="." unique_id=777245643 groups=["push"]]

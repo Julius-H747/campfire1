@@ -9,6 +9,9 @@
 [ext_resource type="Script" uid="uid://c3lkes3nevkik" path="res://area_2d.gd" id="7_adccs"]
 [ext_resource type="Texture2D" uid="uid://c2sw75ovbsoyb" path="res://sprites/Sprites and asset packs for caves/Sprites and asset packs for caves/Side door.png" id="8_hj7cb"]
 [ext_resource type="PackedScene" uid="uid://bff1syfk34kvr" path="res://alien.tscn" id="9_hj7cb"]
+[ext_resource type="Script" uid="uid://caoro2exqjfuu" path="res://controls.gd" id="10_og124"]
+[ext_resource type="Texture2D" uid="uid://bm1f4bhxg14og" path="res://sprites/controls.png" id="11_m5qmx"]
+[ext_resource type="Texture2D" uid="uid://dv6nbs3w4ia24" path="res://sprites/controls_hover.png" id="12_5dau4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0s074"]
 texture = ExtResource("3_1tqva")
@@ -730,5 +733,24 @@ script = ExtResource("6_35d2g")
 [node name="alien" parent="." unique_id=2363711 instance=ExtResource("9_hj7cb")]
 position = Vector2(295, 463)
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1072589437]
+
+[node name="Controls" type="Button" parent="CanvasLayer" unique_id=1806830204]
+offset_left = 976.0
+offset_top = 592.0
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("10_og124")
+metadata/_edit_group_ = true
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Controls" unique_id=620252379]
+layout_mode = 0
+offset_right = 192.0
+offset_bottom = 64.0
+texture_normal = ExtResource("11_m5qmx")
+texture_pressed = ExtResource("11_m5qmx")
+texture_hover = ExtResource("12_5dau4")
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
+[connection signal="pressed" from="CanvasLayer/Controls/TextureButton" to="CanvasLayer/Controls" method="_on_texture_button_pressed"]

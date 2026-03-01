@@ -10,6 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://01qw57tgblm0" path="res://sprites/Pixel Woods Asset Pack/Pixel Woods Asset Pack/Tileset/Pixel_Woods_Tileset.png" id="8_8yc5u"]
 [ext_resource type="Texture2D" uid="uid://dtwcfjb8b7iw0" path="res://sprites/Sprites and asset packs for caves/Sprites and asset packs for caves/UFO/ufo.png" id="9_s3xfi"]
 [ext_resource type="Script" uid="uid://dj6q4dwj7fbx" path="res://checkbbbbbbox.gd" id="10_s3xfi"]
+[ext_resource type="Script" uid="uid://caoro2exqjfuu" path="res://controls.gd" id="11_heopo"]
+[ext_resource type="Texture2D" uid="uid://bm1f4bhxg14og" path="res://sprites/controls.png" id="12_rf8cr"]
+[ext_resource type="Texture2D" uid="uid://dv6nbs3w4ia24" path="res://sprites/controls_hover.png" id="13_h0ooc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qv8ih"]
 texture = ExtResource("8_8yc5u")
@@ -402,7 +405,7 @@ sources/0 = SubResource("TileSetAtlasSource_rf8cr")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qv8ih"]
 size = Vector2(290, 191)
 
-[node name="Node2D" type="Node2D" unique_id=115414298]
+[node name="Node2D2" type="Node2D" unique_id=115414298]
 
 [node name="Control" type="Control" parent="." unique_id=1874891882]
 layout_mode = 3
@@ -563,4 +566,23 @@ script = ExtResource("10_s3xfi")
 position = Vector2(2333, 384.5)
 shape = SubResource("RectangleShape2D_qv8ih")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2064186649]
+
+[node name="Controls" type="Button" parent="CanvasLayer" unique_id=878396680]
+offset_left = 976.0
+offset_top = 592.0
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("11_heopo")
+metadata/_edit_group_ = true
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Controls" unique_id=544885769]
+layout_mode = 0
+offset_right = 192.0
+offset_bottom = 64.0
+texture_normal = ExtResource("12_rf8cr")
+texture_pressed = ExtResource("12_rf8cr")
+texture_hover = ExtResource("13_h0ooc")
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="pressed" from="CanvasLayer/Controls/TextureButton" to="CanvasLayer/Controls" method="_on_texture_button_pressed"]

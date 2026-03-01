@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://diucico048nfb" path="res://sprites/Scaffolding_and_BG_Parts (16 x 16).png" id="1_qrujo"]
 [ext_resource type="PackedScene" uid="uid://bu7g4hm01d4lp" path="res://player.tscn" id="2_5lcx6"]
 [ext_resource type="PackedScene" uid="uid://bff1syfk34kvr" path="res://alien.tscn" id="3_an40m"]
+[ext_resource type="Script" uid="uid://boterc7pigfvy" path="res://endlevel3.gd" id="5_an40m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_an40m"]
 texture = ExtResource("1_5lcx6")
@@ -159,6 +160,9 @@ texture = ExtResource("1_qrujo")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_mu84n")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mu84n"]
+size = Vector2(288, 592)
+
 [node name="Node2D" type="Node2D" unique_id=1991255750]
 
 [node name="bg" type="TileMapLayer" parent="." unique_id=605262009]
@@ -179,3 +183,12 @@ scale = Vector2(1, 1)
 [node name="alien" parent="." unique_id=1638685878 groups=["player2"] instance=ExtResource("3_an40m")]
 position = Vector2(330, 396)
 scale = Vector2(0.8, 0.8)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=162451495]
+script = ExtResource("5_an40m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1064358680]
+position = Vector2(1616, 1768)
+shape = SubResource("RectangleShape2D_mu84n")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

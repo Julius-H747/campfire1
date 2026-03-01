@@ -13,6 +13,8 @@ var JUMP_VELOCITY := -600.0
 
 @onready var asprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var camera: Camera2D = $Camera2D
+@onready var label = $"../CanvasLayer/Usbs"
+
 
 var is_dashing := false
 var dash_timer := 0.0
@@ -21,6 +23,8 @@ var dash_direction := 1.0
 var jumps := 0
 var dashes := 0
 var og_scale: Vector2
+
+var usbs = 0
 
 func _ready() -> void:
 	camera.zoom = Vector2(1, 1)
@@ -123,3 +127,7 @@ func offcam():
 		camera.enabled = false
 	else:
 		camera.enabled = true
+
+func add_usb():
+	usbs += 1
+	label.text = "UBS-C: " + str(usbs)

@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bu7g4hm01d4lp" path="res://player.tscn" id="4_adccs"]
 [ext_resource type="Texture2D" uid="uid://dvb3ihtnq4ovc" path="res://sprites/( D&K ) Caves Tile V.2.png" id="5_hj7cb"]
 [ext_resource type="Script" uid="uid://1d1svj3yb3e4" path="res://wall.gd" id="6_35d2g"]
+[ext_resource type="Script" uid="uid://c3lkes3nevkik" path="res://area_2d.gd" id="7_adccs"]
+[ext_resource type="Texture2D" uid="uid://c2sw75ovbsoyb" path="res://sprites/Sprites and asset packs for caves/Sprites and asset packs for caves/Side door.png" id="8_hj7cb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0s074"]
 texture = ExtResource("3_1tqva")
@@ -635,6 +637,36 @@ texture = ExtResource("5_hj7cb")
 [sub_resource type="TileSet" id="TileSet_m5qmx"]
 sources/0 = SubResource("TileSetAtlasSource_og124")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_wugmh"]
+atlas = ExtResource("8_hj7cb")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7foj"]
+atlas = ExtResource("8_hj7cb")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0s074"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wugmh")
+}],
+"loop": false,
+"name": &"door",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7foj")
+}],
+"loop": true,
+"name": &"no",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vhxsp"]
+size = Vector2(44.5, 58)
+
 [node name="Node2D" type="Node2D" unique_id=539909088]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=638813624]
@@ -678,3 +710,19 @@ scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AAAoAA8AAAAQAAQAAAAoAA4AAAAQAAQAAAAoAAwAAAAQAAQAAAAoAA0AAAAQAAQAAAAoAAsAAAAQAAQAAAApAAsAAAASAAQAAAApAAwAAAASAAQAAAApAA0AAAASAAQAAAApAA4AAAASAAQAAAApAA8AAAASAAQAAAA=")
 tile_set = SubResource("TileSet_m5qmx")
 script = ExtResource("6_35d2g")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1633410240]
+scale = Vector2(2, 2)
+script = ExtResource("7_adccs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D" unique_id=923199030]
+position = Vector2(56, 176)
+sprite_frames = SubResource("SpriteFrames_0s074")
+animation = &"door"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=634465272]
+position = Vector2(1674, 285.5)
+shape = SubResource("RectangleShape2D_vhxsp")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://dpalytw7e6l58"]
+[gd_scene format=4 uid="uid://8e0skwp3yuxy"]
 
 [ext_resource type="Texture2D" uid="uid://blm12q42ih6e3" path="res://sprites/BG_1/BG.png" id="1_hs5xw"]
 [ext_resource type="Texture2D" uid="uid://3wgfwv4grqnw" path="res://sprites/BG_1/Woods 2.png" id="2_mm2j8"]
@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bmap2iownh4jo" path="res://sprites/BG_1/Pixel_Woods_Tileset.png" id="7_heopo"]
 [ext_resource type="Texture2D" uid="uid://01qw57tgblm0" path="res://sprites/Pixel Woods Asset Pack/Pixel Woods Asset Pack/Tileset/Pixel_Woods_Tileset.png" id="8_8yc5u"]
 [ext_resource type="Texture2D" uid="uid://dtwcfjb8b7iw0" path="res://sprites/Sprites and asset packs for caves/Sprites and asset packs for caves/UFO/ufo.png" id="9_s3xfi"]
-[ext_resource type="Script" uid="uid://dj6q4dwj7fbx" path="res://checkbbbbbbox.gd" id="10_s3xfi"]
+[ext_resource type="Script" uid="uid://ckv0sw8t1ktyk" path="res://qwertyu.gd" id="10_rf8cr"]
 [ext_resource type="Script" uid="uid://caoro2exqjfuu" path="res://controls.gd" id="11_heopo"]
 [ext_resource type="Texture2D" uid="uid://bm1f4bhxg14og" path="res://sprites/controls.png" id="12_rf8cr"]
 [ext_resource type="Texture2D" uid="uid://dv6nbs3w4ia24" path="res://sprites/controls_hover.png" id="13_h0ooc"]
@@ -556,11 +556,11 @@ position = Vector2(2333, 385)
 scale = Vector2(0.4723127, 0.46867317)
 texture = ExtResource("9_s3xfi")
 
-[node name="alien" parent="." unique_id=2363711 instance=ExtResource("13_heopo")]
+[node name="alien" parent="." unique_id=2363711 groups=["player2"] instance=ExtResource("13_heopo")]
 position = Vector2(232, 488)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1567048328]
-script = ExtResource("10_s3xfi")
+script = ExtResource("10_rf8cr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1008913556]
 position = Vector2(2333, 384.5)

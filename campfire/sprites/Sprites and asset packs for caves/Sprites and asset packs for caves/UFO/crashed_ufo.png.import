@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kojvl3y4i65p"
-path="res://.godot/imported/0b1gwsmp55j11-removebg-preview.png-1252446fc1d58086620c6a7fd0db3c3d.ctex"
+uid="uid://dxinuqdyyu681"
+path="res://.godot/imported/crashed_ufo.png-dc91f776b69e09afc43427cebee5f4fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Sprites and asset packs for caves/Sprites and asset packs for caves/UFO/0b1gwsmp55j11-removebg-preview.png"
-dest_files=["res://.godot/imported/0b1gwsmp55j11-removebg-preview.png-1252446fc1d58086620c6a7fd0db3c3d.ctex"]
+source_file="res://sprites/Sprites and asset packs for caves/Sprites and asset packs for caves/UFO/crashed_ufo.png"
+dest_files=["res://.godot/imported/crashed_ufo.png-dc91f776b69e09afc43427cebee5f4fd.ctex"]
 
 [params]
 

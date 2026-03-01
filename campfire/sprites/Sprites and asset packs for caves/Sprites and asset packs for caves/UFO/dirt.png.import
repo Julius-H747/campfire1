@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwh2mqeluv6lw"
-path="res://.godot/imported/1000_F_224644402_eMf0WQeZP7EJIMJZLYJCSyQaWGYeVew0-removebg-preview.png-3a19d7e3bd04cea1e3ee0dbafcf7dac3.ctex"
+path="res://.godot/imported/dirt.png-1779f890863b413b98e8fadfe3141b5c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Sprites and asset packs for caves/Sprites and asset packs for caves/UFO/1000_F_224644402_eMf0WQeZP7EJIMJZLYJCSyQaWGYeVew0-removebg-preview.png"
-dest_files=["res://.godot/imported/1000_F_224644402_eMf0WQeZP7EJIMJZLYJCSyQaWGYeVew0-removebg-preview.png-3a19d7e3bd04cea1e3ee0dbafcf7dac3.ctex"]
+source_file="res://sprites/Sprites and asset packs for caves/Sprites and asset packs for caves/UFO/dirt.png"
+dest_files=["res://.godot/imported/dirt.png-1779f890863b413b98e8fadfe3141b5c.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxinuqdyyu681"
-path="res://.godot/imported/pixel-art-illustration-ufo-pixelated-ufo-ufo-alien-space-icon-pixelated-pixel-art-game_1038602-506__1_-removebg-preview (2).png-8d6beede15013c11848154c9a1a7b62c.ctex"
+uid="uid://bkvijeb0siyrj"
+path="res://.godot/imported/ufo_fly.png-0462ed02075452961c3797f8868dd1b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Sprites and asset packs for caves/Sprites and asset packs for caves/UFO/pixel-art-illustration-ufo-pixelated-ufo-ufo-alien-space-icon-pixelated-pixel-art-game_1038602-506__1_-removebg-preview (2).png"
-dest_files=["res://.godot/imported/pixel-art-illustration-ufo-pixelated-ufo-ufo-alien-space-icon-pixelated-pixel-art-game_1038602-506__1_-removebg-preview (2).png-8d6beede15013c11848154c9a1a7b62c.ctex"]
+source_file="res://sprites/Sprites and asset packs for caves/Sprites and asset packs for caves/UFO/ufo_fly.png"
+dest_files=["res://.godot/imported/ufo_fly.png-0462ed02075452961c3797f8868dd1b5.ctex"]
 
 [params]
 

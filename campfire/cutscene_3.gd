@@ -4,7 +4,8 @@ var lines = [
  "yoo no problem glorbus Jr",
  "ight imma head off now outta earth twin",
  "ight have fun twin, get on your spaceship and dont forget me bro",
- "i wont bro, imma leave cya!"
+ "i wont bro, imma leave cya!",
+ "Okay Cya! Have fun in Glorbia!!"
 ]
 var line := 0
 var turn := false

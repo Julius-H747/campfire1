@@ -33,8 +33,7 @@ func _physics_process(delta: float) -> void:
 		tele.visible = false
 	if Input.is_action_just_pressed("g"):
 		camchange()
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
+	
 	var direction := Input.get_axis("a", "d")
 	leftright(direction)
 	if velocity.x < 0:

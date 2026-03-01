@@ -1,0 +1,211 @@
+[gd_scene format=3 uid="uid://bpecfcnusaoc7"]
+
+[ext_resource type="Texture2D" uid="uid://ykrpvgea2otr" path="res://sprites/Backgrounds/BG_1/Woods 2.png" id="1_a365o"]
+[ext_resource type="Texture2D" uid="uid://cu0o2lqiadf0" path="res://sprites/Pixel Woods Asset Pack/Pixel Woods Asset Pack/Backgrounds/BG_1/Lights 2.png" id="2_lem1r"]
+[ext_resource type="Script" path="res://control.gd" id="3_v6iqr"]
+[ext_resource type="Texture2D" uid="uid://duw8ohkkym6yh" path="res://sprites/Backgrounds/BG_1/Woods 1.png" id="4_nq8lc"]
+[ext_resource type="Texture2D" uid="uid://shj703nuvol" path="res://sprites/Pixel Woods Asset Pack/Pixel Woods Asset Pack/Backgrounds/BG_1/Lights 1.png" id="5_h1b5g"]
+[ext_resource type="FontFile" uid="uid://kr53qpprtd8n" path="res://sprites/pixel-game/Pixel Game.otf" id="6_lem1r"]
+[ext_resource type="Script" uid="uid://h8ifjfypdxcp" path="res://quit.gd" id="7_h1b5g"]
+[ext_resource type="Texture2D" uid="uid://dxegqmn1wefs0" path="res://sprites/quit.png" id="8_r6nvt"]
+[ext_resource type="Texture2D" uid="uid://dmxmkttnonhdl" path="res://sprites/quit_hover.png" id="9_dvnn8"]
+
+[sub_resource type="Gradient" id="Gradient_u4yv4"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.13803378, 0.13803375, 0.13803375, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_r6nvt"]
+gradient = SubResource("Gradient_u4yv4")
+
+[sub_resource type="Gradient" id="Gradient_3q24f"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.15487596, 0.154876, 0.1548759, 0.49411765)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_v6iqr"]
+gradient = SubResource("Gradient_3q24f")
+
+[node name="Control" type="Control" unique_id=598664698]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=749694941]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = SubResource("GradientTexture2D_r6nvt")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=312915057]
+layout_mode = 0
+offset_top = -64.0
+offset_right = 1152.0
+offset_bottom = 649.0
+texture = ExtResource("1_a365o")
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=1262052974]
+layout_mode = 0
+offset_right = 1144.0
+offset_bottom = 648.0
+texture = ExtResource("2_lem1r")
+
+[node name="TextureRect4" type="TextureRect" parent="." unique_id=797578013]
+layout_mode = 0
+offset_left = 392.0
+offset_right = 1536.0
+offset_bottom = 648.0
+texture = ExtResource("2_lem1r")
+
+[node name="TextureRect5" type="TextureRect" parent="." unique_id=1199223082]
+layout_mode = 0
+offset_left = -328.0
+offset_right = 816.0
+offset_bottom = 648.0
+texture = ExtResource("2_lem1r")
+
+[node name="bg" type="Control" parent="." unique_id=1230627308 groups=["rot"]]
+anchors_preset = 0
+offset_left = -1142.0
+offset_top = -12.0
+offset_right = -1102.0
+offset_bottom = 28.0
+script = ExtResource("3_v6iqr")
+
+[node name="TextureRect3" type="TextureRect" parent="bg" unique_id=773708129]
+layout_mode = 0
+offset_left = 1142.0
+offset_top = 12.0
+offset_right = 2286.0
+offset_bottom = 660.0
+texture = ExtResource("4_nq8lc")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="bg" unique_id=1292579386]
+layout_mode = 0
+offset_left = 1174.0
+offset_top = 12.0
+offset_right = 2326.0
+offset_bottom = 660.0
+texture = ExtResource("5_h1b5g")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect2" type="TextureRect" parent="bg" unique_id=432136783 groups=["rot"]]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 12.0
+offset_right = 1142.0
+offset_bottom = 660.0
+texture = ExtResource("4_nq8lc")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect4" type="TextureRect" parent="bg" unique_id=233786847]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 12.0
+offset_right = 1142.0
+offset_bottom = 660.0
+texture = ExtResource("5_h1b5g")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect5" type="TextureRect" parent="bg" unique_id=29432538]
+layout_mode = 0
+offset_left = 254.0
+offset_top = 12.0
+offset_right = 1406.0
+offset_bottom = 660.0
+texture = ExtResource("5_h1b5g")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect6" type="TextureRect" parent="bg" unique_id=649340437]
+layout_mode = 0
+offset_left = 942.0
+offset_top = 12.0
+offset_right = 2094.0
+offset_bottom = 660.0
+texture = ExtResource("5_h1b5g")
+metadata/_edit_lock_ = true
+
+[node name="Control" type="Control" parent="." unique_id=1298328787]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="mh1" type="TextureRect" parent="Control" unique_id=281489289]
+layout_mode = 0
+offset_left = 320.0
+offset_right = 832.0
+offset_bottom = 648.0
+texture = SubResource("GradientTexture2D_v6iqr")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control" unique_id=1159783509]
+layout_mode = 0
+offset_left = 320.0
+offset_right = 832.0
+offset_bottom = 648.0
+theme_override_fonts/normal_font = ExtResource("6_lem1r")
+theme_override_font_sizes/normal_font_size = 23
+bbcode_enabled = true
+text = "
+
+
+
+
+
+THANKS FOR PLAYING
+
+CREDITS:
+ADITYA.MENON
+JULIUS.HOLD
+ROHAN.FLYNN
+
+CHARACTERS:
+SUPER AWESOME KNIGHT
+GLORBUS JR (5TH SOON TO BE KING OF GLORBIA)
+
+ART INSPIRATION
+CAVE ITCH.IO ASSETS
+ITCH ARTISTS
+
+LEAD DEVELOPER
+ROHAN FLYNN
+
+LVL DESIGNER AND DIRECTOR 
+ADITYA.MENON
+
+CO LEAD DEVELOPER AND DESIGNER 
+JULIUS HOLD"
+horizontal_alignment = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1859233384]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer" unique_id=423901660]
+offset_left = 320.0
+offset_top = 8.0
+offset_right = 832.0
+offset_bottom = 48.0
+theme_override_fonts/normal_font = ExtResource("6_lem1r")
+theme_override_font_sizes/normal_font_size = 50
+text = "USB-C QUEST"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Quit" type="Button" parent="." unique_id=502818514]
+layout_mode = 0
+offset_left = 960.0
+offset_top = 584.0
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("7_h1b5g")
+metadata/_edit_group_ = true
+
+[node name="TextureButton" type="TextureButton" parent="Quit" unique_id=1974794223]
+layout_mode = 0
+offset_right = 192.0
+offset_bottom = 64.0
+texture_normal = ExtResource("8_r6nvt")
+texture_pressed = ExtResource("8_r6nvt")
+texture_hover = ExtResource("9_dvnn8")
+
+[connection signal="pressed" from="Quit/TextureButton" to="Quit" method="_on_texture_button_pressed"]

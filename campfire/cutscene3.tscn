@@ -106,7 +106,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Control" type="Control" unique_id=1013026921]
+[node name="Control2" type="Control" unique_id=1013026921]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

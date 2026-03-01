@@ -14,7 +14,6 @@ func _on_body_exited(body: Node2D) -> void:
 
 func _physics_process(delta: float) -> void:
 	if on:
-		animated_door.play("no")
-		get_tree().change_scene_to_file("res://ufo.tscn")
-	else:
 		animated_door.play("door")
+	else:
+		animated_door.play("no")

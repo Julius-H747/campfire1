@@ -1,9 +1,10 @@
 extends Control
 var lines = [
-	"man1",
- "man2",
- "man1",
- "man2"
+	"ohhh thank you so much big dawg for helping me",
+ "yoo no problem glorbus Jr",
+ "ight imma head off now outta earth twin",
+ "ight have fun twin, get on your spaceship and dont forget me bro",
+ "i wont bro, imma leave cya!"
 ]
 var line := 0
 var turn := false
@@ -86,4 +87,4 @@ func _process(delta: float) -> void:
 				mh1.visible = false
 				mh2.visible = true
 		else:
-			get_tree().change_scene_to_file("res://.tscn")
+			get_tree().change_scene_to_file("res://fnal.tscn")

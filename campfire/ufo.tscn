@@ -3,13 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://b06q26t8yl1rk" path="res://sprites/Sprites and asset packs for caves/Sprites and asset packs for caves/Cavern Tileset/crystal cave tiles.png" id="1_lwnds"]
 [ext_resource type="FontFile" uid="uid://kr53qpprtd8n" path="res://sprites/pixel-game/Pixel Game.otf" id="1_rp6wq"]
 [ext_resource type="Texture2D" uid="uid://dr0sfd3hjoimg" path="res://sprites/Sprites and asset packs for caves/Sprites and asset packs for caves/Dungeon Tileset with Side door.png" id="2_vg23t"]
-[ext_resource type="Script" path="res://area_2d.gd" id="4_g7foj"]
 [ext_resource type="Texture2D" uid="uid://c2sw75ovbsoyb" path="res://sprites/Sprites and asset packs for caves/Sprites and asset packs for caves/Side door.png" id="4_rit6l"]
 [ext_resource type="Texture2D" uid="uid://cu0o2lqiadf0" path="res://sprites/Pixel Woods Asset Pack/Pixel Woods Asset Pack/Backgrounds/BG_1/Lights 2.png" id="4_vg23t"]
 [ext_resource type="PackedScene" uid="uid://bu7g4hm01d4lp" path="res://player.tscn" id="5_bh5go"]
+[ext_resource type="Script" uid="uid://bvlftaxtcxou8" path="res://area_2d1.gd" id="5_wugmh"]
 [ext_resource type="Texture2D" uid="uid://d0ovej2j568nr" path="res://sprites/Sprites and asset packs for caves/Sprites and asset packs for caves/USB/vector-pixel-art-usb-wire-260nw-1222483150-removebg-preview.png" id="7_g7foj"]
 [ext_resource type="Script" uid="uid://bedal6fsgivry" path="res://usbs.gd" id="7_u063t"]
-[ext_resource type="Script" uid="uid://dj6q4dwj7fbx" path="res://checkbbbbbbox.gd" id="10_wugmh"]
+[ext_resource type="Script" uid="uid://c0jx82yxqpb75" path="res://area_2d_3.gd" id="10_wugmh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lwnds"]
 texture = ExtResource("1_lwnds")
@@ -3364,7 +3364,7 @@ radius = 22.53479
 height = 79.89441
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2vx44"]
-size = Vector2(196, 95)
+size = Vector2(263, 52)
 
 [node name="ufo" type="Node2D" unique_id=1672917805]
 
@@ -3449,7 +3449,7 @@ texture = ExtResource("4_vg23t")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=351945627]
 scale = Vector2(2, 2)
-script = ExtResource("4_g7foj")
+script = ExtResource("5_wugmh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D" unique_id=2120012696]
 position = Vector2(56, 176)
@@ -3461,7 +3461,7 @@ position = Vector2(56, 176)
 shape = SubResource("RectangleShape2D_f38p0")
 
 [node name="Player" parent="." unique_id=1639854593 groups=["player"] instance=ExtResource("5_bh5go")]
-position = Vector2(120, 320)
+position = Vector2(120, 322)
 scale = Vector2(0.75, 0.75)
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="." unique_id=495020402]
@@ -3498,7 +3498,7 @@ texture = ExtResource("7_g7foj")
 script = ExtResource("10_wugmh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3" unique_id=1153180080]
-position = Vector2(1378, 48.5)
+position = Vector2(1344.5, 27)
 shape = SubResource("RectangleShape2D_2vx44")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

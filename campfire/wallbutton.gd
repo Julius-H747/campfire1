@@ -10,7 +10,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player") or body.is_in_group("player2"):
-		get_tree().call_deferred("reload_current_scene")
+	if body.is_in_group("player"):
+		scale.y = 0.1
+		get_tree().call_group("wallw", "breakw")

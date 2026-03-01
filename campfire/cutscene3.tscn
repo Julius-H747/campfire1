@@ -1,0 +1,312 @@
+[gd_scene format=3 uid="uid://dxtu6ccb8h7nl"]
+
+[ext_resource type="Script" uid="uid://c6g2vlybo6kij" path="res://cutscene_3.gd" id="1_qt8kh"]
+[ext_resource type="Texture2D" uid="uid://ykrpvgea2otr" path="res://sprites/Backgrounds/BG_1/Woods 2.png" id="1_rbduj"]
+[ext_resource type="Script" path="res://control.gd" id="2_7blru"]
+[ext_resource type="Texture2D" uid="uid://cu0o2lqiadf0" path="res://sprites/Pixel Woods Asset Pack/Pixel Woods Asset Pack/Backgrounds/BG_1/Lights 2.png" id="2_cjtna"]
+[ext_resource type="Texture2D" uid="uid://duw8ohkkym6yh" path="res://sprites/Backgrounds/BG_1/Woods 1.png" id="3_cjtna"]
+[ext_resource type="Texture2D" uid="uid://shj703nuvol" path="res://sprites/Pixel Woods Asset Pack/Pixel Woods Asset Pack/Backgrounds/BG_1/Lights 1.png" id="4_7blru"]
+[ext_resource type="FontFile" uid="uid://kr53qpprtd8n" path="res://sprites/pixel-game/Pixel Game.otf" id="4_qt8kh"]
+[ext_resource type="Script" uid="uid://dwbn2hjjmhr7d" path="res://rich_text_label.gd" id="5_rf7w2"]
+[ext_resource type="Texture2D" uid="uid://g3jl3c57t26n" path="res://sprites/xeno-grunt-idle1.png" id="6_0xkqg"]
+[ext_resource type="Texture2D" uid="uid://b2s3ktjwuwktn" path="res://sprites/xeno-grunt-idle2.png" id="7_crym7"]
+[ext_resource type="Texture2D" uid="uid://3ymyriu4ls8n" path="res://sprites/New folder/_Idle1.png" id="8_wdrhy"]
+[ext_resource type="Texture2D" uid="uid://d3076dilewxby" path="res://sprites/New folder/_Idle2.png" id="9_0egrv"]
+[ext_resource type="Texture2D" uid="uid://bnuathick0le2" path="res://sprites/New folder/_Idle3.png" id="10_k7v34"]
+[ext_resource type="Texture2D" uid="uid://7d4tjhmpku21" path="res://sprites/New folder/_Idle4.png" id="11_y07hq"]
+[ext_resource type="Texture2D" uid="uid://bardjowrt6hpe" path="res://sprites/New folder/_Idle5.png" id="12_xu3kd"]
+[ext_resource type="Texture2D" uid="uid://ojm1na7j3qjk" path="res://sprites/New folder/_Idle6.png" id="13_2wuxj"]
+[ext_resource type="Texture2D" uid="uid://b8r6wmp7wsdh5" path="res://sprites/New folder/_Idle7.png" id="14_npdnw"]
+[ext_resource type="Texture2D" uid="uid://c4ejystpwwvol" path="res://sprites/New folder/_Idle8.png" id="15_lfqgw"]
+[ext_resource type="Texture2D" uid="uid://oj1nespkjyv" path="res://sprites/New folder/_Idle9.png" id="16_rf5op"]
+[ext_resource type="Texture2D" uid="uid://djy45xilu7yau" path="res://sprites/New folder/_Idle10.png" id="17_moqwt"]
+
+[sub_resource type="Gradient" id="Gradient_u4yv4"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.13803378, 0.13803375, 0.13803375, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6c6xn"]
+gradient = SubResource("Gradient_u4yv4")
+
+[sub_resource type="Gradient" id="Gradient_p30sb"]
+colors = PackedColorArray(1, 0, 0, 0.45882353, 1, 1, 1, 0.45882353)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1lv3c"]
+gradient = SubResource("Gradient_p30sb")
+
+[sub_resource type="Gradient" id="Gradient_53jq0"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.17402825, 0.17402825, 0.17402825, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_su3m4"]
+gradient = SubResource("Gradient_53jq0")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_proi3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_0xkqg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_crym7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_3q24f"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.15487596, 0.154876, 0.1548759, 0.49411765)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_d7bl6"]
+gradient = SubResource("Gradient_3q24f")
+
+[sub_resource type="Gradient" id="Gradient_pvbl2"]
+colors = PackedColorArray(1, 1, 1, 0.45882353, 0, 0, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cj372"]
+gradient = SubResource("Gradient_pvbl2")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wqnqq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_wdrhy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0egrv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_k7v34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_y07hq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xu3kd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_2wuxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_npdnw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_lfqgw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_rf5op")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_moqwt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Control" type="Control" unique_id=1013026921]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qt8kh")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=266202015]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = SubResource("GradientTexture2D_6c6xn")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2025096226]
+layout_mode = 0
+offset_top = -64.0
+offset_right = 1152.0
+offset_bottom = 649.0
+texture = ExtResource("1_rbduj")
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=625013749]
+layout_mode = 0
+offset_right = 1144.0
+offset_bottom = 648.0
+texture = ExtResource("2_cjtna")
+
+[node name="TextureRect4" type="TextureRect" parent="." unique_id=1516506883]
+layout_mode = 0
+offset_left = 392.0
+offset_right = 1536.0
+offset_bottom = 648.0
+texture = ExtResource("2_cjtna")
+
+[node name="TextureRect5" type="TextureRect" parent="." unique_id=951922456]
+layout_mode = 0
+offset_left = -328.0
+offset_right = 816.0
+offset_bottom = 648.0
+texture = ExtResource("2_cjtna")
+
+[node name="bg" type="Control" parent="." unique_id=1701687592 groups=["rot"]]
+anchors_preset = 0
+offset_left = -1142.0
+offset_top = -12.0
+offset_right = -1102.0
+offset_bottom = 28.0
+script = ExtResource("2_7blru")
+
+[node name="TextureRect3" type="TextureRect" parent="bg" unique_id=1823931795]
+layout_mode = 0
+offset_left = 1142.0
+offset_top = 12.0
+offset_right = 2286.0
+offset_bottom = 660.0
+texture = ExtResource("3_cjtna")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="bg" unique_id=2039192311]
+layout_mode = 0
+offset_left = 1174.0
+offset_top = 12.0
+offset_right = 2326.0
+offset_bottom = 660.0
+texture = ExtResource("4_7blru")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect2" type="TextureRect" parent="bg" unique_id=114458835 groups=["rot"]]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 12.0
+offset_right = 1142.0
+offset_bottom = 660.0
+texture = ExtResource("3_cjtna")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect4" type="TextureRect" parent="bg" unique_id=1242320217]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 12.0
+offset_right = 1142.0
+offset_bottom = 660.0
+texture = ExtResource("4_7blru")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect5" type="TextureRect" parent="bg" unique_id=1297416543]
+layout_mode = 0
+offset_left = 254.0
+offset_top = 12.0
+offset_right = 1406.0
+offset_bottom = 660.0
+texture = ExtResource("4_7blru")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect6" type="TextureRect" parent="bg" unique_id=2018945700]
+layout_mode = 0
+offset_left = 942.0
+offset_top = 12.0
+offset_right = 2094.0
+offset_bottom = 660.0
+texture = ExtResource("4_7blru")
+metadata/_edit_lock_ = true
+
+[node name="man1" type="Control" parent="." unique_id=1156593014]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="man1" unique_id=1032775305]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 128.0
+texture = SubResource("GradientTexture2D_1lv3c")
+metadata/_edit_lock_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="man1" unique_id=1056750366]
+layout_mode = 0
+offset_left = 136.0
+offset_right = 1152.0
+offset_bottom = 128.0
+theme_override_fonts/normal_font = ExtResource("4_qt8kh")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "this is test text"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("5_rf7w2")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect2" type="TextureRect" parent="man1" unique_id=1385488189]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+texture = SubResource("GradientTexture2D_su3m4")
+metadata/_edit_lock_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="man1" unique_id=930562294]
+position = Vector2(64, 64)
+scale = Vector2(4.740741, 4.740741)
+sprite_frames = SubResource("SpriteFrames_proi3")
+metadata/_edit_lock_ = true
+
+[node name="mh1" type="TextureRect" parent="man1" unique_id=196148797]
+visible = false
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 128.0
+texture = SubResource("GradientTexture2D_d7bl6")
+
+[node name="man2" type="Control" parent="." unique_id=1589764504]
+anchors_preset = 0
+offset_left = 5.0
+offset_top = 524.0
+offset_right = 45.0
+offset_bottom = 564.0
+
+[node name="TextureRect" type="TextureRect" parent="man2" unique_id=15481934]
+layout_mode = 0
+offset_left = -5.0
+offset_top = -12.0
+offset_right = 1147.0
+offset_bottom = 124.0
+texture = SubResource("GradientTexture2D_cj372")
+metadata/_edit_lock_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="man2" unique_id=1306195326]
+layout_mode = 0
+offset_left = -5.0
+offset_top = -12.0
+offset_right = 1019.0
+offset_bottom = 124.0
+theme_override_fonts/normal_font = ExtResource("4_qt8kh")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "this text is a test"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("5_rf7w2")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect2" type="TextureRect" parent="man2" unique_id=1854556015]
+layout_mode = 0
+offset_left = 1019.0
+offset_top = -12.0
+offset_right = 1147.0
+offset_bottom = 124.0
+texture = SubResource("GradientTexture2D_su3m4")
+metadata/_edit_lock_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="man2" unique_id=1290455353]
+position = Vector2(1083, 55.99996)
+scale = Vector2(3.5555544, 3.5789475)
+sprite_frames = SubResource("SpriteFrames_wqnqq")
+metadata/_edit_lock_ = true
+
+[node name="mh1" type="TextureRect" parent="man2" unique_id=528074796]
+visible = false
+layout_mode = 0
+offset_left = -5.0
+offset_top = -12.0
+offset_right = 1147.0
+offset_bottom = 124.0
+texture = SubResource("GradientTexture2D_d7bl6")
